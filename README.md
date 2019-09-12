@@ -65,7 +65,13 @@ There are three run options.  For Input File Formatting and Output Options and F
  
 Output prints to a file in the `Output` directory named [model_dwarfset_beta.out].  The data from [dwarfset.dat] is copied into the header of the output file, below which are the following columns: mass, integrated photon spectrum, beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
 
-**B) Specify the set of dwarfs to be analyzed and the confidence level (beta) for Nbound.**  This option requires two arguments to run:
+**B) Specify the set of dwarfs to be analyzed, the confidence level (β) for Nbound, and the mass and integrated photon spectrum for single dark matter model point:**
+```
+./madhat [dwarfset.dat] [beta] [mass] [integrated spectrum]
+```
+This option is a duplicate of option A, but allows the user to quickly check a single model point. Output will print to the screen.
+
+**C) Specify the set of dwarfs to be analyzed and the confidence level (beta) for Nbound.**  This option requires two arguments to run:
 ```
 ./madhat [dwarfset.dat] [beta]
 ```
@@ -74,7 +80,7 @@ Output prints to a file in the `Output` directory named [model_dwarfset_beta.out
 
 Output prints to the screen in the following format: beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
 
-**C) Prompted command-line input.**  This option is useful for testing a single dark matter model point.  A series of prompts will ask the user for the relevant inputs.  Note that this duplicates the functionality of Run Options A and B.  This option requires zero arguments following the executable:
+**D) Prompted command-line input.**  This option is useful for testing a single dark matter model point.  A series of prompts will ask the user for the relevant inputs.  Note that this duplicates the functionality of Run Options A and B.  This option requires zero arguments following the executable:
 ```
 ./madhat
 ```
@@ -108,7 +114,7 @@ There are two optional output flags located in the file flags.dat, both of which
 
 1. bool "fileout", on line 1 of flags.dat: If this is set to "true" then all run options print to a file []_[beta].out in the Output folder rather than to the screen.
 
-2. bool "printbeta", on line 2 of flags.dat: If this is set to "true" then for running with two or zero arguments (run options B and C), the output will be a table of Nbound(beta) for Nbound increasing as an integer up to the value [beta] passed as input.  Note that this output option is not defined for running with three inputs (run option A). Each line of the output will either have the format "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP, sigv, +dsigv, -dsigv" or "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP." Note: to output all values of (beta, Nbound), use [beta]=0.999 as input. 
+2. bool "printbeta", on line 2 of flags.dat: If this is set to "true" then for running with two or zero arguments (run options B and C), the output will be a table of Nbound(beta) for Nbound increasing as an integer up to the value [beta] passed as input.  Note that this output option is not defined for running with three inputs (run option A). Each line of the output will either have the format "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP, sigv, +dsigv, -dsigv" or "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP."  To output all values of (beta, Nbound), use [beta]=0.999 as input. 
 
 
 ## Input File Formatting
@@ -124,7 +130,7 @@ Set2.dat [ref](https://doi.org/10.1103/PhysRevD.93.103512)\
 Set3.dat [ref](https://academic.oup.com/mnras/article-abstract/461/3/2914/2608532?redirectedFrom=fulltext)\
 Set4.dat [ref](https://academic.oup.com/mnras/article-abstract/468/3/2884/3077187?redirectedFrom=fulltext), [ref](https://academic.oup.com/mnras/article-abstract/479/1/64/5017795?redirectedFrom=fulltext) \
 Set5.dat [ref](https://dx.doi.org/10.1103/PhysRevD.95.123008)\
-Set6.dat [ref](https://academic.oup.com/mnras/article-abstract/482/3/3480/5142321?redirectedFrom=fulltext)
+Set6.dat [ref](https://academic.oup.com/mnras/article-abstract/482/3/3480/5142321?redirectedFrom=fulltext) \
 Set7.dat [ref](https://dx.doi.org/10.1088/1475-7516/2018/12/039)
 
 To define a new dwarf set or enter new J-factor values, use the template SetTemplate.dat, which is a space-separated table of the following form:
