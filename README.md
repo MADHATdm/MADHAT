@@ -115,16 +115,17 @@ There are two optional output flags located in the file flags.dat, both of which
 
 ### Dwarf Sets
 
-PMFs for 49 dwarfs and dwarf candidates determined with Fermi-LAT Pass <> are included in the MADHAT 1.0 distribution.  There are nine pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory "DwarfSets:" (cite new paper, which will have updated dwarf set table)\
-Set1.dat [ref]()\
+PMFs for 49 dwarfs and dwarf candidates determined with Fermi-LAT Pass 8R3 are included in the MADHAT 1.0 distribution.  There are ten pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory "Input:" \
+Set1.dat [ref](https://doi.org/10.3847/1538-4357/834/2/110)\
 Set1a.dat\
 Set1b.dat\
 Set1c.dat\
-Set2.dat [ref]()\
-Set3.dat [ref]()\
-Set4.dat [ref]()\
-Set5.dat [ref]()\
-Set6.dat [ref]()
+Set2.dat [ref](https://doi.org/10.1103/PhysRevD.93.103512)\
+Set3.dat [ref](https://academic.oup.com/mnras/article-abstract/461/3/2914/2608532?redirectedFrom=fulltext)\
+Set4.dat [ref](https://academic.oup.com/mnras/article-abstract/468/3/2884/3077187?redirectedFrom=fulltext), [ref](https://academic.oup.com/mnras/article-abstract/479/1/64/5017795?redirectedFrom=fulltext) \
+Set5.dat [ref](https://dx.doi.org/10.1103/PhysRevD.95.123008)\
+Set6.dat [ref](https://academic.oup.com/mnras/article-abstract/482/3/3480/5142321?redirectedFrom=fulltext)
+Set7.dat [ref](https://dx.doi.org/10.1088/1475-7516/2018/12/039)
 
 To define a new dwarf set or enter new J-factor values, use the template SetTemplate.dat, which is a space-separated table of the following form:
 ```<pre>
