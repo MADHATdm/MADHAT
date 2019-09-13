@@ -112,9 +112,10 @@ Note: The cross section limit calculation assumes that the dark matter particles
 ### Output Options
 There are two optional output flags located in the file flags.dat, both of which default to "false". 
 
-1. bool "fileout", on line 1 of flags.dat: If this is set to "true" then all run options print to a file []_[beta].out in the Output folder rather than to the screen.
+1. bool "fileout", on line 9 of flags.dat: If this is set to "true" then all run options print to a file []_[beta].out in the Output folder rather than to the screen.
 
-2. bool "printbeta", on line 2 of flags.dat: If this is set to "true" then for running with two or zero arguments (run options B and C), the output will be a table of Nbound(beta) for Nbound increasing as an integer up to the value [beta] passed as input.  Note that this output option is not defined for running with three inputs (run option A). Each line of the output will either have the format "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP, sigv, +dsigv, -dsigv" or "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP."  To output all values of (beta, Nbound), use [beta]=0.999 as input. 
+2. bool "printbeta", on line 10
+ of flags.dat: If this is set to "true" then for running with two or zero arguments (run options B and C), the output will be a table of Nbound(beta) for Nbound increasing as an integer up to the value [beta] passed as input.  Note that this output option is not defined for running with three inputs (run option A). Each line of the output will either have the format "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP, sigv, +dsigv, -dsigv" or "beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP."  To output all values of (beta, Nbound), use [beta]=0.999 as input. 
 
 
 ## Input File Formatting
