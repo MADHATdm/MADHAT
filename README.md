@@ -80,23 +80,6 @@ This option is a duplicate of option A, but allows the user to quickly check a s
 
 Output prints to the screen in the following format: beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
 
-**D) Prompted command-line input.**  This option is useful for testing a single dark matter model point.  A series of prompts will ask the user for the relevant inputs.  Note that this duplicates the functionality of Run Options A and B.  This option requires zero arguments following the executable:
-```
-./madhat
-```
-The following four prompts will appear:
-1. Which file specifies the dwarf set you would like to use? (Choose or define a file in the directory Input.)
-   - Input should be entered as a string, eg. "Set2.dat"
-2. Specify a Confidence Level for the results, eg. 0.68, 0.90, 0.95, etc.
-   - Input should be a floating point number between 0 and 1.
-3. Specify the dark matter mass in GeV, or 0 (zero) if not applicable.
-   - Input should be a floating point number.
-4. Specify the integrated photon spectrum between 1 GeV and 100 GeV.
-   - Input should be a floating point number.  
-   - Note that this prompt will not appear if the response to the third prompt is "0."
-
-Output prints to the screen in the following format: mass, integrated photon spectrum, beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP, sigv, +dsigv, -dsigv.
-
 
 ## Output Options and Formatting
 
@@ -171,9 +154,10 @@ The input file model.in should have the following format:
 # spectrum: photon energy spectrum integrated from 1 to 100 GeV
 ###########################################################
 # mass (GeV)   spectrum (1-100 GeV)
-  6            20.76
-  10           21.51
-  14           20.99
+10      0.8734
+50      7.7765
+100     13.6097
+500     33.7307
 ```
 where the mass is a floating point number that specifies the dark matter mass in GeV and energy spectrum (1-100 GeV) is a floating point number that specifies the integrated photon energy spectrum between 1 and 100 GeV.  This file can be of arbitraty length.
 
@@ -237,13 +221,9 @@ The input
 ```
 should produce an output file Output/dmtest_Set1_0.9500.out that contains the following:
 ```
-#Mass(Gev)   Spectrum       Beta      Nbound        Phi(cm^3 s^-1 GeV^-2)   +dPhi             -dPhi            sigv(cm^3 s^-1)        +dsigv             -dsigv
-6.0000     20.7600      0.9501     414.5011      3.728e-30            6.75934e-30        2.56887e-30        1.62477e-28        2.94591e-28        1.11959e-28
-10.0000     21.5100      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        4.38433e-28        7.95901e-28        3.02308e-28
-14.0000     20.9900      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        8.80617e-28        1.59861e-27        6.07202e-28
-23.0000     20.5700      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        2.4253e-27        4.40272e-27        1.67229e-27
-24.0000     20.5800      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        2.63949e-27        4.79156e-27        1.81998e-27
-35.0000     21.3700      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        5.40599e-27        9.81366e-27        3.72753e-27
-38.0000     20.5400      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        6.62995e-27        1.20356e-26        4.57147e-27
-46.0000     21.6300      0.9500     414.5011      3.75235e-30            6.81176e-30        2.58732e-30        9.22577e-27        1.67478e-26        6.36134e-27
+#Mass(GeV)   Spectrum       Beta      Nbound        PhiPP(cm^3 s^-1 GeV^-2)   +dPhiPP             -dPhiPP            sigv(cm^3 s^-1)        +dsigv             -dsigv
+10.0000     0.8734      0.9501     414.5011      3.728e-30            6.75934e-30        2.56887e-30        1.07276e-26        1.94505e-26        7.39213e-27
+50.0000     7.7765      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        3.01212e-26        5.46135e-26        2.07557e-26
+100.0000     13.6097      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        6.88443e-26        1.24823e-25        4.74388e-26
+500.0000     33.7307      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        6.94434e-25        1.2591e-24        4.78517e-25
 ```
