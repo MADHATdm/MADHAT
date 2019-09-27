@@ -19,9 +19,9 @@ MADHAT is dependent on [Boost](https://www.boost.org/) libaries.
 
 Documentation for [Boost version 1_70_0](https://www.boost.org/doc/libs/1_70_0/)
 
-#### Installation Instructions:
+#### Boost Installation Instructions:
 
-Brief instructions are below, and full installation instructions for Boost can be found [here](https://www.boost.org/doc/libs/1_70_0/more/getting_started/index.html).
+Brief instructions for Linux, Mac OS, and Windows are below, and full installation instructions for Boost can be found [here](https://www.boost.org/doc/libs/1_70_0/more/getting_started/index.html).
 
 Once the installation is complete, you must edit line 5 of the MADHAT Makefile so that it specifies the correct path and version for your Boost installation, eg.
 ```
