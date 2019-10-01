@@ -90,7 +90,7 @@ For parameter definitions, see https://arxiv.org/pdf/1802.03826.pdf.
  * sigv [cm^3 s^-1]
  * +/-dsigv [cm^3 s^-1] (uncertainty due to varying J-factor)
 
-Note: The cross section limit calculation assumes that the dark matter particles are their own antiparticles. If the dark matter is Dirac rather than Majorana, divide the cross section by two. If the particle has some asymmetry between the particle and antiparticle, then the prefactor needs to be calculated. 
+Note: The cross section limit calculation assumes that the dark matter particles are their own antiparticles. If the dark matter is Dirac rather than Majorana, multiply the cross section by two. If the particle has some asymmetry between the particle and antiparticle, then the prefactor needs to be calculated. 
 
 ### Output Options
 There are two optional output flags located in the file flags.dat, both of which default to "false". 
@@ -143,7 +143,7 @@ Log10(J)=21.51\
 Log10(J+dJ)=21.51+0.31\
 Log10(J-dJ)=21.51-0.24
 
-Please reserve filenames SetN.dat, where N are integers, for dwarf sets defined in future versions of MADHAT.
+Note that input files must end with a line of data (no additional newlines). Please reserve filenames SetN.dat, where N are integers, for dwarf sets defined in future versions of MADHAT.
 
 ### Dark Matter Mass and Integrated Photon Spectrum
 
