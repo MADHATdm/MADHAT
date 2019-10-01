@@ -55,7 +55,7 @@ where [options] are described below.
 
 There are three run options.  For Input File Formatting and Output Options and Formatting, see the relevant sections below.
 
-**A) Specify the set of dwarfs to be analyzed, the confidence level (beta) for Nbound, and the dark matter model parameters.**  This option requires three arguments to run:
+**Run Option A) Specify the set of dwarfs to be analyzed, the confidence level (beta) for Nbound, and the dark matter model parameters.**  This option requires three arguments to run:
 ```
 ./madhat [dwarfset.dat] [beta] [model.in]
 ```
@@ -65,13 +65,13 @@ There are three run options.  For Input File Formatting and Output Options and F
  
 Output prints to a file in the `Output` directory named [model_dwarfset_beta.out].  The data from [dwarfset.dat] is copied into the header of the output file, below which are the following columns: mass, integrated photon spectrum, beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
 
-**B) Specify the set of dwarfs to be analyzed, the confidence level (β) for Nbound, and the mass and integrated photon spectrum for single dark matter model point:**
+**Run Option B) Specify the set of dwarfs to be analyzed, the confidence level (β) for Nbound, and the mass and integrated photon spectrum for single dark matter model point:**
 ```
 ./madhat [dwarfset.dat] [beta] [mass] [integrated spectrum]
 ```
 This option is a duplicate of option A, but allows the user to quickly check a single model point. Output will print to the screen.
 
-**C) Specify the set of dwarfs to be analyzed and the confidence level (beta) for Nbound.**  This option requires two arguments to run:
+**Run Option C) Specify the set of dwarfs to be analyzed and the confidence level (beta) for Nbound.**  This option requires two arguments to run:
 ```
 ./madhat [dwarfset.dat] [beta]
 ```
@@ -105,7 +105,7 @@ There are two optional output flags located in the file flags.dat, both of which
 
 ### Dwarf Sets
 
-PMFs for 49 dwarfs and dwarf candidates determined with Fermi-LAT Pass 8R3 are included in the MADHAT 1.0 distribution.  There are ten pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory "Input:" \
+PMFs for 58 dwarfs and dwarf candidates determined with Fermi-LAT Pass 8R3 are included in the MADHAT 1.0 distribution.  There are ten pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory "Input:" \
 Set1.dat [ref](https://doi.org/10.3847/1538-4357/834/2/110)\
 Set1a.dat\
 Set1b.dat\
