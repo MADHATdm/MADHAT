@@ -128,17 +128,20 @@ To define a new dwarf set or enter new J-factor values, use the template SetTemp
 # +dJ: positive error in Log10(J)
 # -dJ: negative error in Log10(J)
 ###########################################################
-#   ID    J       +dJ    -dJ
-    9     21.59   0.26   0.29
-    10    21.52   0.26   0.29
-    32    21.67   0.33   0.30
-    36    22.25   0.37   0.62
-    46    21.69   0.27   0.34
+# ID    J       +dJ    -dJ
+6	    20.76    	.24   	.30
+10	   21.51	    .31	   .24
+14	   20.99    1.08	   .37
+23.  	20.57	    .36	   .21
+24	   20.58    	.48   	.35
+35.  	21.37    	.34	   .28
+38	   20.54   	2.15	   .39
+46	   21.63	    .44	   .28
 ```
-where ID indicates the dwarf ID number (see Dwarf ID Numbers below), J is the Log10 of the J-factor, for J-factors specified in units of [GeV^2 cm^-5], and +/-dJ is the error in Log10(J).  For example, for dwarf ID 9:\
-Log10(J)=21.59\
-Log10(J+dJ)=21.59+0.26\
-Log10(J-dJ)=21.59-0.29
+where ID indicates the dwarf ID number (see Dwarf ID Numbers below), J is the Log10 of the J-factor, for J-factors specified in units of [GeV^2 cm^-5], and +/-dJ is the error in Log10(J).  For example, for dwarf ID 10:\
+Log10(J)=21.51\
+Log10(J+dJ)=21.51+0.31\
+Log10(J-dJ)=21.51-0.24
 
 Please reserve filenames SetN.dat, where N are integers, for dwarf sets defined in future versions of MADHAT.
 
@@ -159,59 +162,68 @@ The input file model.in should have the following format:
 100     13.6097
 500     33.7307
 ```
-where the mass is a floating point number that specifies the dark matter mass in GeV and energy spectrum (1-100 GeV) is a floating point number that specifies the integrated photon energy spectrum between 1 and 100 GeV.  This file can be of arbitraty length.
+where the mass is a floating point number that specifies the dark matter mass in GeV and energy spectrum (1-100 GeV) is a floating point number that specifies the integrated photon energy spectrum between 1 and 100 GeV.  This file can be of arbitraty length, and must end with a line of data (no additional newlines).
 
 ### Dwarf ID Numbers
 
- 1--Aquarius II\
+1--Aquarius II\
  2--Bootes I\
  3--Bootes II\
  4--Bootes III\
  5--Canes Venatici I\
  6--Canes Venatici II\
- 7--Carina\
- 8--Carina II\
- 9--Cetus II\
- 10--Columba I\
- 11--Coma Berenices\
- 12--Draco\
- 13--Draco II\
- 14--Eridanus II\
- 15--Eridanus III\
- 16--Fornax\
- 17--Grus I\
- 18--Grus II\
- 19--Hercules\
- 20--Horologium I\
- 21--Horologium II\
- 22--Hydra II\
- 23--Indus II\
- 24--Kim 2\
- 25--Leo I\
- 26--Leo II\
- 27--Leo IV\
- 28--Leo T\
- 29--Leo V\
- 30--Pegasus III\
- 31--Phoenix II\
- 32--Pictor I\
- 33--Pisces II\
- 34--Reticulum II\
- 35--Reticulum III\
- 36--Sagittarius II\
- 37--Sculptor\
- 38--Segue 1\
- 39--Segue 2\
- 40--Sextans\
- 41--Triangulum II\
- 42--Tucana II\
- 43--Tucana III\
- 44--Tucana IV\
- 45--Tucana V\
- 46--Ursa Major I\
- 47--Ursa Major II\
- 48--Ursa Minor\
- 49--Willman 1
+ 7--Canis Major\
+ 8--Carina\
+ 9--Carina II\
+ 10--Carina III\
+ 11--Cetus II\
+ 12--Cetus III\
+ 13--Columba I\
+ 14--Coma Berenices\
+ 15--Crater II\
+ 16--Draco\
+ 17--Draco II\
+ 18--Eridanus II\
+ 19--Eridanus III\
+ 20--Fornax\
+ 21--Grus I\
+ 22--Grus II\
+ 23--Hercules\
+ 24--Horologium I\
+ 25--Horologium II\
+ 26--Hydra II\
+ 27--Hydrus I\
+ 28--Indus II\
+ 29--Kim 2\
+ 30--Laevens 3\
+ 31--Leo I\
+ 32--Leo II\
+ 33--Leo IV\
+ 34--Leo T\
+ 35--Leo V\
+ 36--Pegasus III\
+ 37--Phoenix II\
+ 38--Pictor I\
+ 39--Pictor II\
+ 40--Pisces II\
+ 41--Reticulum II\
+ 42--Reticulum III\
+ 43--Sagittarius\
+ 44--Sagittarius II\
+ 45--Sculptor\
+ 46--Segue 1\
+ 47--Segue 2\
+ 48--Sextans\
+ 49--Triangulum II\
+ 50--Tucana II\
+ 51--Tucana III\
+ 52--Tucana IV\
+ 53--Tucana V\
+ 54--Ursa Major I\
+ 55--Ursa Major II\
+ 56--Ursa Minor\
+ 57--Virgo I\
+ 58--Willman 1
 
 ## Testing Your Installation
 
