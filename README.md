@@ -3,7 +3,7 @@ Model-Agnostic Dark Halo Analysis Tool, version 1.0
 
 MADHAT is a numerical tool that implements a Fermi-LAT data-driven and model-independent analysis of gamma-ray emission due to dark matter annihilation/decay in dwarf spheroidal galaxies.
 
-Details of the analysis are described in https://arxiv.org/pdf/1802.03826.pdf. MADHAT allows a model-agnositic analysis in the sense a user can independently choose a set of dwarfs to analyze, a J factor (and errors) for each dwarf, and, if relevant, the dark matter mass and integrated photon energy spectrum.  Outputs include an upper limit (at a specified confidence level) on the number of photons that could have come from non-standard astrophysics, eg. dark matter annihilation or decay, and, if the dark matter mass and integrated energy spectrum are specified, an upper limit on the annihilation cross section.
+Details of the analysis are described in https://arxiv.org/pdf/1802.03826.pdf. MADHAT allows a model-agnositic analysis in the sense a user can independently choose a set of dwarfs and dwarf candidates to analyze, a J factor (and errors) for each object, and, if relevant, the dark matter mass and integrated photon energy spectrum.  Outputs include an upper limit (at a specified confidence level) on the number of photons that could have come from non-standard astrophysics, eg. dark matter annihilation or decay, and, if the dark matter mass and integrated energy spectrum are specified, an upper limit on the annihilation cross section.
 
 This README is structured as follows:\
 Required Libraries\
