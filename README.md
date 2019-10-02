@@ -147,7 +147,7 @@ Note that input files must end with a line of data (no additional newlines). Ple
 
 ### Dark Matter Mass and Integrated Photon Spectrum
 
-The input file model.in should have the following format:
+The input file model.in must be located in the `Input` directory, and should have the following format:
 ```<pre>
 ############################################################
 # MADHAT (Model-Agnostic Dark Halo Analysis Tool) 
@@ -160,9 +160,9 @@ The input file model.in should have the following format:
 10      0.8734
 50      7.7765
 100     13.6097
-500     33.7307
+500     33.6607
 ```
-where the mass is a floating point number that specifies the dark matter mass in GeV and energy spectrum (1-100 GeV) is a floating point number that specifies the integrated photon energy spectrum between 1 and 100 GeV.  This file can be of arbitraty length, and must end with a line of data (no additional newlines).
+where the mass is a floating point number that specifies the dark matter mass in GeV and energy spectrum (1-100 GeV) is a floating point number that specifies the integrated photon energy spectrum between 1 and 100 GeV.  This file can be of arbitraty length, and must end with a line of data (no additional newlines).  The MADHAT package includes the dmtest.in template file, as well as four dark matter model files for two-body annihilation to b quarks, W bosons, muon pairs, and tau pairs.
 
 ### Dwarf ID Numbers
 
@@ -233,9 +233,5 @@ The input
 ```
 should produce an output file Output/dmtest_Set1_0.9500.out that contains the following:
 ```
-#Mass(GeV)   Spectrum       Beta      Nbound        PhiPP(cm^3 s^-1 GeV^-2)   +dPhiPP             -dPhiPP            sigv(cm^3 s^-1)        +dsigv             -dsigv
-10.0000     0.8734      0.9501     414.5011      3.728e-30            6.75934e-30        2.56887e-30        1.07276e-26        1.94505e-26        7.39213e-27
-50.0000     7.7765      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        3.01212e-26        5.46135e-26        2.07557e-26
-100.0000     13.6097      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        6.88443e-26        1.24823e-25        4.74388e-26
-500.0000     33.7307      0.9500     414.5011      3.728e-30            6.75934e-30        2.56887e-30        6.94434e-25        1.2591e-24        4.78517e-25
+
 ```
