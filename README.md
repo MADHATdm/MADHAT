@@ -105,7 +105,7 @@ There are two optional output flags located in the file flags.dat, both of which
 
 ### Dwarf Sets
 
-PMFs for 58 dwarfs and dwarf candidates determined with Fermi-LAT Pass 8R3 are included in the MADHAT 1.0 distribution.  There are ten pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory "Input:" \
+PMFs for 58 dwarfs and dwarf candidates determined with Fermi-LAT Pass 8R3 are included in the MADHAT 1.0 distribution.  There are ten pre-defined dwarf sets, including selected dwarfs and J-factors for each, located in the directory `Input:` \
 Set1.dat [ref](https://doi.org/10.3847/1538-4357/834/2/110)\
 Set1a.dat\
 Set1b.dat\
