@@ -13,6 +13,6 @@ MADHAT efficiently provides statistical upper bounds on the number of observed p
 [Required Libraries](https://github.com/MADHATdm/MADHAT/wiki/Required-Libraries)\
 [Installation](https://github.com/MADHATdm/MADHAT/wiki/Installation)\
 [Running MADHAT](https://github.com/MADHATdm/MADHAT/wiki/Running-MADHAT)\
-[Output Formatting and Options](https://github.com/MADHATdm/MADHAT/wiki/Input-Files-and-Formatting)\
 [Input Files and Formatting](https://github.com/MADHATdm/MADHAT/wiki/Input-Files-and-Formatting)\
-[Dwarf ID Numbers](https://github.com/MADHATdm/MADHAT/wiki/Dwarf-ID-Numbers)\
+[Output Format and Options](https://github.com/MADHATdm/MADHAT/wiki/Output-Format-and-Options)\
+[Dwarf ID Numbers](https://github.com/MADHATdm/MADHAT/wiki/Dwarf-ID-Numbers)
