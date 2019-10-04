@@ -1,4 +1,4 @@
-# MADHAT  ![alt text](https://github.com/pearlsandick/MADHAT/blob/master/MADHATlogosmall.png "MADHAT logo")
+![alt text](https://github.com/pearlsandick/MADHAT/blob/master/MADHATlogosmall.png "MADHAT logo") # MADHAT  
 
 Model-Agnostic Dark Halo Analysis Tool, version 1.0
 
