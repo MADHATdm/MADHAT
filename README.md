@@ -5,86 +5,21 @@ Model-Agnostic Dark Halo Analysis Tool, version 1.0
 MADHAT is a numerical tool that implements a Fermi-LAT data-driven and model-independent analysis of gamma-ray emission due to dark matter annihilation/decay in dwarf spheroidal galaxies.
 
 If you use MADHAT, please cite the following papers:\
-[1] K. Boddy, D. Kumar, D. Marfatia, and P. Sandick, Phys.Rev. D97 (2018) no.9, 095031, https://arxiv.org/abs/1802.03826\
+[1] K. Boddy, D. Kumar, D. Marfatia, and P. Sandick, Phys.Rev. D97 (2018) no.9, 095031, https://arxiv.org/abs/1802.03826 \
 [2] K. Boddy, S. Hill, J. Kumar, P. Sandick, and B. Shams Es Haghi, in prep.
 
 
 MADHAT allows a model-agnositic analysis in the sense a user can independently choose a set of dwarfs and dwarf candidates to analyze, a J factor (and errors) for each object, and, if relevant, the dark matter mass and integrated photon energy spectrum.  Outputs include an upper limit (at a specified confidence level) on the number of photons that could have come from non-standard astrophysics, eg. dark matter annihilation or decay, and, if the dark matter mass and integrated energy spectrum are specified, an upper limit on the annihilation cross section.
 
-This README is structured as follows:\
-Required Libraries\
-Make Instructions\
+Detailed information about MADHAT can be found on the wiki:\
+[Required Libraries] (https://github.com/MADHATdm/MADHAT/wiki/Required-Libraries)\
+[Installation](https://github.com/MADHATdm/MADHAT/wiki/Installation)\
 Running MADHAT\
 Output Options and Formatting\
 Input File Formatting\
-Testing Your Installation
-
-## Required Libraries 
-
-MADHAT is dependent on [Boost](https://www.boost.org/) libaries. 
-
-Documentation for [Boost version 1_70_0](https://www.boost.org/doc/libs/1_70_0/)
-
-#### Boost Installation Instructions:
-
-Brief instructions for Linux, Mac OS, and Windows are below, and full installation instructions for Boost can be found [here](https://www.boost.org/doc/libs/1_70_0/more/getting_started/index.html).
-
-Once the installation is complete, you must edit line 5 of the MADHAT Makefile so that it specifies the correct path and version for your Boost installation, eg.
-```
-BOOST = [Path to Boost]/boost_1_70_0
-``` 
-
-**Windows:** Download [boost_1_70_0.zip](https://www.boost.org/users/history/version_1_70_0.html) or [boost_1_70_0.zip](https://www.boost.org/users/history/version_1_70_0.html) and unpack it to install a complete Boost distribution
-
-**Linux and Mac OS:** Download [boost_1_70_0.tar.bz2](https://www.boost.org/users/history/version_1_70_0.html)
-In the directory where you want to put the Boost installation, execute
-```
-tar --bzip2 -xf /path/to/boost_1_70_0.tar.bz2
-```
-
-## Make Instructions
-
-To make the executable, run the command "make" in the main MADHAT directory.\
-Note: to remove old files, run the command "make clean" in the main MADHAT directory.
 
 
-## Running MADHAT 
 
-To run MADHAT with command line input, type the command:
-```
-./madhat [options]
-```
-where [options] are described below.
-
-
-### Run Options
-
-There are three run options.  For Input File Formatting and Output Options and Formatting, see the relevant sections below.
-
-**Run Option A) Specify the set of dwarfs to be analyzed, the confidence level (beta) for Nbound, and the dark matter model parameters.**  This option requires three arguments to run:
-```
-./madhat [dwarfset.dat] [beta] [model.in]
-```
- * [dwarfset.dat] is the file containing the parameters for the dwarfs you'd like to analyze and must be located in the directory `Input`.
- * [beta] is a number between zero and one that specifies the confidence level (eg. 0.95 for 95% CL).
- * [model.in] is a file containing a list of dark matter masses and integrated photon spectra as described below and must be located in the directory `Input`. MADHAT will read [model.in] and calculate output for each line until it reaches the end of the [model.in] file.  
- 
-Output prints to a file in the `Output` directory named [model_dwarfset_beta.out].  The data from [dwarfset.dat] is copied into the header of the output file, below which are the following columns: mass, integrated photon spectrum, beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
-
-**Run Option B) Specify the set of dwarfs to be analyzed, the confidence level (β) for Nbound, and the mass and integrated photon spectrum for single dark matter model point:**
-```
-./madhat [dwarfset.dat] [beta] [mass] [integrated spectrum]
-```
-This option is a duplicate of option A, but allows the user to quickly check a single model point. Output will print to the screen.
-
-**Run Option C) Specify the set of dwarfs to be analyzed and the confidence level (beta) for Nbound.**  This option requires two arguments to run:
-```
-./madhat [dwarfset.dat] [beta]
-```
- * [dwarfset.dat] is the file containing the parameters for the dwarfs you'd like to analyze and must be located in the directory `Input`.
- * [beta] is a number between zero and one that specifies the confidence level (eg. 0.95 for 95% CL). 
-
-Output prints to the screen in the following format: beta, Nbound(beta), PhiPP, +dPhiPP, -dPhiPP.
 
 
 ## Output Options and Formatting
@@ -233,13 +168,3 @@ where the mass is a floating point number that specifies the dark matter mass in
  57--Virgo I\
  58--Willman 1
 
-## Testing Your Installation
-
-The input
-```
-./madhat Set1.dat 0.95 dmtest.in
-```
-should produce an output file Output/dmtest_Set1_0.9500.out that contains the following:
-```
-
-```
