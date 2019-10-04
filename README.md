@@ -2,17 +2,15 @@
 
 Model-Agnostic Dark Halo Analysis Tool, version 1.0
 
-MADHAT is a numerical tool that implements a Fermi-LAT data-driven and model-independent analysis of gamma-ray emission due to dark matter annihilation/decay in dwarf spheroidal galaxies.
-
 If you use MADHAT, please cite the following papers:\
 [1] K. Boddy, D. Kumar, D. Marfatia, and P. Sandick, Phys.Rev. D97 (2018) no.9, 095031, https://arxiv.org/abs/1802.03826 \
 [2] K. Boddy, S. Hill, J. Kumar, P. Sandick, and B. Shams Es Haghi, in prep.
 
+MADHAT is a numerical tool which implements a Fermi-LAT data-driven, model-independent analysis of gamma-ray emission from dwarf satellite galaxies and dwarf galaxy candidates due to dark matter annihilation, dark matter decay, or other nonstandard or unknown astrophysics.
+MADHAT efficiently provides statistical upper bounds on the number of observed photons in excess of the number expected, based on empirical determinations of foregrounds and backgrounds, using a stacked analysis of any selected set of dwarf targets. It also calculates the resulting bounds on the properties of dark matter under any assumptions theuser makes regarding dark sector particle physics or astrophysics. MADHAT v1.0 includes 58 dwarfs and dwarf candidate targets
 
-MADHAT allows a model-agnositic analysis in the sense a user can independently choose a set of dwarfs and dwarf candidates to analyze, a J factor (and errors) for each object, and, if relevant, the dark matter mass and integrated photon energy spectrum.  Outputs include an upper limit (at a specified confidence level) on the number of photons that could have come from non-standard astrophysics, eg. dark matter annihilation or decay, and, if the dark matter mass and integrated energy spectrum are specified, an upper limit on the annihilation cross section.
-
-Detailed information about MADHAT can be found on the wiki:\
-[Required Libraries] (https://github.com/MADHATdm/MADHAT/wiki/Required-Libraries)\
+The [MADHAT wiki](https://github.com/MADHATdm/MADHAT/wiki) contains the following information:\
+[Required Libraries](https://github.com/MADHATdm/MADHAT/wiki/Required-Libraries)\
 [Installation](https://github.com/MADHATdm/MADHAT/wiki/Installation)\
 [Running MADHAT](https://github.com/MADHATdm/MADHAT/wiki/Running-MADHAT)\
 [Output Formatting and Options](https://github.com/MADHATdm/MADHAT/wiki/Input-Files-and-Formatting)\
