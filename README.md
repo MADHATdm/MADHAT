@@ -1,5 +1,5 @@
-# MADHAT
-![alt text](https://github.com/pearlsandick/MADHAT/blob/master/MADHATlogosmall.png "MADHAT logo")
+# MADHAT  ![alt text](https://github.com/pearlsandick/MADHAT/blob/master/MADHATlogosmall.png "MADHAT logo")
+
 Model-Agnostic Dark Halo Analysis Tool, version 1.0
 
 MADHAT is a numerical tool that implements a Fermi-LAT data-driven and model-independent analysis of gamma-ray emission due to dark matter annihilation/decay in dwarf spheroidal galaxies.
