@@ -1,10 +1,12 @@
 # MADHAT
 Model-Agnostic Dark Halo Analysis Tool, version 1.0
+Inline-style: 
+![alt text](https://github.com/pearlsandick/MADHAT/blob/master/MADHATlogo.png "MADHAT logo")
 
 MADHAT is a numerical tool that implements a Fermi-LAT data-driven and model-independent analysis of gamma-ray emission due to dark matter annihilation/decay in dwarf spheroidal galaxies.
 
-If you use MADHAT, please cite the following papers:
-[1] K. Boddy, D. Kumar, D. Marfatia, and P. Sandick, Phys.Rev. D97 (2018) no.9, 095031, https://arxiv.org/abs/1802.03826
+If you use MADHAT, please cite the following papers:\
+[1] K. Boddy, D. Kumar, D. Marfatia, and P. Sandick, Phys.Rev. D97 (2018) no.9, 095031, https://arxiv.org/abs/1802.03826\
 [2] K. Boddy, S. Hill, J. Kumar, P. Sandick, and B. Shams Es Haghi, in prep.
 
 
@@ -148,7 +150,9 @@ Log10(J)=21.51\
 Log10(J+dJ)=21.51+0.31\
 Log10(J-dJ)=21.51-0.24
 
-Note that input files must end with a line of data (no additional newlines). Please reserve filenames SetN.dat, where N are integers, for dwarf sets defined in future versions of MADHAT.
+A dwarf set file must contain, at a minimum, the ID numbers for the dwarfs to be considered.  It may also contain J-factors for each dwarf and J-factor errors.  Note that errors are not necessary, and if omitted, errors on PhiPP will print as zeros. Similarly, if the file only contains dwarf ID numbers, PhiPP will also print as zero. There are ten dwarfset.dat files included in the MADHAT package, plus a template file, SetTemplate.dat.
+
+Note that all input files must end with a line of data (no additional newlines). Please reserve filenames SetN.dat, where N are integers, for dwarf sets defined in future versions of MADHAT.
 
 ### Dark Matter Mass and Integrated Photon Spectrum
 
