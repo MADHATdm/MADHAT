@@ -71,7 +71,26 @@ float process(float Beta, std::ifstream & INPUT, float mass, float energy, int J
             while (ss >> item)
                 dcol++;
         }
+
     }
+
+
+
+if (dcol==1){
+ Juse = 0;
+ Jerror = 0;
+  
+}
+
+
+ if (dcol==2){
+ Juse = 1;
+ Jerror = 1;
+  
+}
+
+
+
     INPUT.clear();
     INPUT.seekg(0, ios::beg);
     for (int i = 0; i < header; ++i) {
@@ -397,9 +416,9 @@ freopen ("/dev/tty", "a", stdout);
                     cout << -(CSP - CS);
                 }
             }
+
             printf("\n");
         }
-
     }
 
     //Final Calculation
@@ -535,6 +554,27 @@ int output(float Nbound, float B, std::ifstream & INPUT, float mass, float energ
                 dcol++;
         }
     }
+
+
+
+
+if (dcol==1){
+ Juse = 0;
+ Jerror = 0;
+  
+}
+
+
+ if (dcol==2){
+ Juse = 1;
+ Jerror = 1;
+  
+}
+
+
+
+
+
     INPUT.clear();
     INPUT.seekg(0, ios::beg);
     for (int i = 0; i < header; ++i) {
@@ -727,6 +767,14 @@ freopen ("/dev/tty", "a", stdout);
         printf("Error: Failed to load dwarf data file.\n");
         exit(1);
     }
+
+
+
+
+
+
+
+
     float mass = 0;
     float energy = 1;
     float crosscons = 8 * M_PI * mass * mass / energy; //Creates a constant that is used to calculate the cross section
@@ -801,6 +849,7 @@ freopen ("/dev/tty", "a", stdout);
     }
 
     process(Beta, INPUT, mass, energy, Juse, Jerror, 2);
+    cout << "\n";
     return 0;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -943,6 +992,10 @@ freopen ("/dev/tty", "a", stdout);
         exit(1);
     }
 
+
+
+
+
     string address = "Input"; //copies the dwarfset data into output
     address += "/";
     address += name;
@@ -992,7 +1045,7 @@ freopen ("/dev/tty", "a", stdout);
         output(Nbound, Beta, INPUT, mass, energy, Juse, Jerror, 3); //Running just the output calculations
 
     }
-
+    cout << "\n";
     return 0;
 
 }
@@ -1018,6 +1071,12 @@ freopen ("/dev/tty", "a", stdout);
         printf("Error: Failed to load dwarf data file.\n");
         exit(1);
     }
+
+
+
+
+
+
     float crosscons = 8 * M_PI * mass * mass / energy; //Creates a constant that is used to calculate the cross section
 
     if (fileout == true) {
@@ -1089,10 +1148,65 @@ freopen ("/dev/tty", "a", stdout);
         cout << "###################################################################################OUTPUT############################################################################" << endl;
 
     }
+     
+
+
+
+
+
+
+   string line2;
+    int header2 = 0;
+    string skip("#");
+    INPUT.seekg(0, ios::beg);
+    while (getline(INPUT, line2)) {
+        if (contains(line2, skip)) {
+            header2++;
+        } else {
+            break;
+        }
+
+}
+
+
+      getline(INPUT, line2);
+      string word;
+      int word_count = 0;
+      stringstream ss(line2);
+
+      while (ss >> word) {
+        
+        ++word_count;
+    }
+    
+
+ if (word_count==1){
+ Juse = 0;
+ Jerror = 0;
+  
+}
+
+
+ if (word_count==2){
+ Juse = 1;
+ Jerror = 0;
+  
+}
+
+
+
+
+
+
+
+
+
 
     process(Beta, INPUT, mass, energy, Juse, Jerror, 4);
+    cout << "\n";
     return 0;
 }
+
 
 /////////////////////////////////////////////////////////////
 int main(int argc, char * argv[]) {
