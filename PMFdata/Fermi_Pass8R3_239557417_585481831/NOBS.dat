@@ -1,10 +1,10 @@
 ############################################################
 # MADHAT (Model-Agnostic Dark Halo Analysis Tool ) Fermi PMF
+# Ref: P. Bruel et al. [arXiv:1810.11394]; Atwood ef al. [arXiv:0902.1089]
 #
-# Use README in file to understand inputs
-# The first column corresponds to the dwarf number such as column 1 is  Aquarius II
-# The second column corresponds to the total number of observed events for that dwarf
-# The last column corresponds to average effective area ,Aeff, multipled by the total effective observation, Tobs.
+# Column 1: ID# of the dwarf galaxy
+# Column 2: total number of observed photons (Nobs)
+# Column 3: exposure = average effective area (Aeff) multiplied by observation time (Tobs)
 ###########################################################
 1	184	4.279e+11
 2	131	4.552e+11

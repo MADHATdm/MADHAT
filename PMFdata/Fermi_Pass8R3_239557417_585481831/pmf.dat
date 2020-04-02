@@ -1,9 +1,9 @@
 ############################################################
 # MADHAT (Model-Agnostic Dark Halo Analysis Tool ) Fermi PMF
+# Ref: P. Bruel et al. [arXiv:1810.11394]; Atwood ef al. [arXiv:0902.1089]
 #
-# Use README in file to understand inputs
-# The first column decides the number of photons detected
-# Every column after is the frequency of that event for a dwarf with the first column after corresponding to dwarf Aquarius II 
+# Column 1: number of photons, N
+# Columns 2-59: PMF value for N photons for dwarfs with ID# 1-58
 ###########################################################
 0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
 1	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
