@@ -1,10 +1,10 @@
 ############################################################
 # MADHAT (Model-Agnostic Dark Halo Analysis Tool) 
-# All flags are false by defult to run the defult setup described in the README
+# All flags are false by default to run the default setup described on the wiki
 #
-# fileout flag changes the output for the first two output #options to a file in output from outputing to the terminal.
-# printall flag changes the output so it displays beta as Nbound is incremented from outputing just the exact bound.
-###########################################################
+# fileout flag: "true" defaults output to a file (instead of screen)
+# printall flag: "true" prints all values of beta (as a function of Nbound)
+############################################################
 #flag		value    
 fileout		false      
 printbeta	false

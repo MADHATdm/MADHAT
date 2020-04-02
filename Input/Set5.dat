@@ -1,11 +1,12 @@
 ############################################################
-# MADHAT (Model-Agnostic Dark Halo Analysis Tool ) Set 5
+# MADHAT (Model-Agnostic Dark Halo Analysis Tool) 
+# Dwarf Set: Set 5
+# Ref: K. Boddy, J. Kumar, L. E. Strigari, & M. Y. Wang [arXiv:1702.00408]
 #
-# Use README in file to understand inputs
-# ID#: Identify the Dwarf Galaxy to be analyzed
-# J: The log10 of the J factor corresponding to the dwarf galaxy
-# dJ+: The positive error log10 of the J factor corresponding to the dwarf galaxy
-# dJ-: The negative log10 of the J factor corresponding to the dwarf galaxy
+# ID#: ID of dwarf galaxy to be analyzed
+# J: The log10 of the J factor [GeV^2 cm^-5] for the dwarf galaxy
+# +dJ: positive error in log10(J)
+# -dJ: negative error in log10(J)
 ###########################################################
 #ID	J	+dJ	-dJ
 14	21.59	0.26	0.29

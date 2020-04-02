@@ -1,10 +1,11 @@
 ############################################################
 # MADHAT (Model-Agnostic Dark Halo Analysis Tool) 
-# Dark Matter Model File: dmtest
+# Dark Matter Model File: DMbb.in
+# Ref: M. Cirelli et al. [arXiv:1012.4515]; P. Ciafaloni et al. [arXiv:1009.0224]
 #
 # mass: DM mass in GeV
 # spectrum: photon energy spectrum integrated from 1 to 100 GeV
-###########################################################
+############################################################
 # mass (GeV)   spectrum (1-100 GeV)
 10	0.8734136713122038
 20	2.7886631944849447
